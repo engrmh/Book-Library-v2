@@ -1,0 +1,310 @@
+@font-face {
+    font-family: VazirFont;
+    src: url(../font/Vazir.woff) format('woff');
+}
+*{
+    font-family: VazirFont , sans-serif;
+}
+html{
+    direction: rtl;
+}
+body{
+    background-image: url(../img/ivo-rainha-0rzUepBXHN0-unsplash.jpg);
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+}
+.bookLibrarySet{
+    filter:grayscale(90%) blur(2px);
+}
+.container{
+    display: flex;
+    padding: 1rem;
+    width: 75rem;
+    justify-content: space-between;
+    margin: 0 auto;
+    color: #fff;
+}
+.addBook{
+    display: flex;
+    flex-direction: column;
+    width: 34rem;
+    text-align: center;
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, 0.08);
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+.addBookTitle{
+    border-bottom: 3px solid #fff;
+    width: fit-content;
+    text-align: center;
+    align-self: center;
+}
+.wrapper1{
+    display: flex;
+    justify-content: space-between;
+    width: 20rem;
+    margin: 0 auto;
+}
+
+.addBook div label{
+    display: block;
+    margin: 1rem 0 .3rem 0;
+}
+.book-Name input,
+.book-Author input{
+    width: 20rem;
+    height: 1.8rem;
+    border: none;
+    background-color: #d8d8d8;
+    border-radius: 5px;
+    text-align: center;
+}
+.book-Year input{
+    width: 8rem;
+    height: 1.8rem;
+    border: none;
+    background-color: #d8d8d8;
+    border-radius: 5px;
+    text-align: center;
+}
+.addBook select{
+    width: 9rem;
+    height: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    background-color: #c8c8c8;
+}
+.addBook select option{
+    width: 1rem;
+    background-color: #c8c8c8;
+    color: #000;
+    text-align: center;
+}
+.searchBook{
+    display: flex;
+    flex-direction: column;
+    width: 34rem;
+    text-align: center;
+    border-radius: 15px;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, 0.08);
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+.searchTitle{
+    border-bottom: 3px solid #fff;
+    width: fit-content;
+    align-self: center;
+}
+.searchBook div label{
+    display: block;
+    margin: 1rem 0 .3em 0;
+}
+.searchBook div input{
+    width: 20rem;
+    height: 1.8rem;
+    border: none;
+    background-color: #d8d8d8;
+    border-radius: 5px;
+    text-align: center;
+}
+.subButton{
+    width: 10rem;
+    padding: .5rem;
+    display: block;
+    align-self: center;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: large;
+    margin: 2rem 0 1rem 0;
+    background-color: #c8c8c8;
+}
+.subButton:hover{
+    cursor: pointer;
+    filter: brightness(86%)
+            drop-shadow(1px 1px 10px rgb(255,255,255,0.5));
+}
+.result{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 16rem;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #0009;
+    padding: .3rem;
+    height: 3rem;
+    border-radius: 5px;
+}
+.table{
+    width: 75rem;
+    margin: 0 auto 2rem;
+    text-align: center;
+    border-radius: 5px;
+
+    backdrop-filter: blur(10px);
+    background-color: rgba(255,255,255, 0.08);
+    box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 8px;
+    border: 2px rgba(255,255,255,0.4) solid;
+    border-bottom: 2px rgba(40,40,40,0.35) solid;
+    border-right: 2px rgba(40,40,40,0.35) solid;
+}
+.table th{
+    width: 4rem;
+    height: 2rem;
+}
+.table th:first-child{
+    width: 1rem;
+    height: 2rem;
+}
+.table thead{
+    background-color: gray;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    color: #fff;
+}
+.table tbody tr:nth-child(even){
+    background-color: #c8c8c8;
+}
+.table tbody tr:nth-child(odd){
+    color: #fff;
+}
+.bookLoan{
+    background-color: #009900;
+    padding: .3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-left: .5rem;
+    color: #ffffff;
+}
+.bookLoanDate{
+    background-color: #0033cc;
+    padding: .3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin-left: .5rem;
+    color: #ffffff;
+}
+.bookDel{
+    background-color: #e60000;
+    padding: .3rem;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+}
+.bookLoan:hover,
+.bookLoanDate:hover,
+.bookDel:hover{
+    cursor: pointer;
+    filter: brightness(86%);
+}
+.modal {
+    background-color: #009900;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    border-radius: 10px;
+    display: none;
+    padding: 1rem;
+    color: #ffffff;
+}
+.confirm{
+    background-color:#d8d8d8;
+    position: absolute;
+    bottom: 4rem;
+    left: 3rem;
+    width: 20rem;
+    display: none;
+    border-radius: 10px;
+    padding: 1rem;
+    color: #000;
+    text-align: center;
+    border: 1px solid #000;
+}
+.confirm-wrapper{
+    display: flex;
+    justify-content: center;
+}
+.operationBtn{
+    width: 12rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.confirmBtn{
+    border: none;
+    padding: .5rem;
+    width: 4rem;
+    border-radius: 10px;
+    background-color:#009900;
+    color: #fff;
+}
+.cancellBtn{
+    border: none;
+    padding: .5rem;
+    width: 4rem;
+    border-radius: 10px;
+    background-color:#e60000;
+    color: #fff;
+}
+.cancellBtn:hover ,
+.confirmBtn:hover{
+    cursor: pointer;
+    filter: brightness(86%)
+            drop-shadow(1px 1px 10px rgb(255,255,255,0.5));
+}
+.dateBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: absolute;
+    width: 15rem;
+    height: 7rem;
+    background-color: #d8d8d8;
+    text-align: center;
+    border-radius: 5px;
+    top: -100rem;
+    right: 40%;
+}
+.box-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 14.5rem;
+}
+.getBookDate p,
+.backBookDate p{
+    margin-bottom: 0;
+}
+.closeDateBox{
+    width: 10rem;
+    padding: .5rem;
+    display: block;
+    align-self: center;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    margin: 1rem 0 0 0;
+    background-color: #009900;
+    color: #fff;
+}
+.closeDateBox:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+    outline: 2px solid #fff;
+}

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="./Asset/css/style.css">
+
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="./Asset/css/normalize.css">
+
+    <title>لیست کتاب</title>
+</head>
+<body>
+    <section id="bookLibrary" class="">
+        <section class="book">
+            <div class="container">
+                <div class="addBook">
+                    <h1 class="addBookTitle">ثبت کتاب</h1>
+                    <div class="form">
+                        <div class="book-Name">
+                            <label for="bookName">عنوان کتاب</label>
+                            <input type="text" name="bookName" id="bookName" required>
+                        </div>
+                        <div class="book-Author">
+                            <label for="bookAuthor">نام نویسنده یا انتشارات</label>
+                            <input type="text" name="bookAuthor" id="bookAuthor" required>
+                        </div>
+                        <div class="wrapper1">
+                            <div class="book-Year">
+                                <label for="bookYear">سال انتشار</label>
+                                <input type="text" name="bookYear" id="bookYear" required>
+                            </div>
+                            <div class="book-Subject">
+                                <label for="subjects">دسته بندی موضوعی</label>
+                                <select name="subject" id="subjects">
+                                    <option class="subOption" value="nosubject" selected>انتخاب کنید</option>
+                                    <option class="subOption" value="mazhabi">مذهبی</option>
+                                    <option class="subOption" value="varzeshi">ورزشی</option>
+                                    <option class="subOption" value="adabiat">ادبیات</option>
+                                    <option class="subOption" value="amoozeshi">آموزشی</option>
+                                    <option class="subOption" value="ravanshenasi">روانشناسی</option>
+                                    <option class="subOption" value="ejtemaei">اجتماعی</option>
+                                    <option class="subOption" value="elmi">علمی</option>
+                                    <option class="subOption" value="mosavvar">مصور</option>
+                                    <option class="subOption" value="falsafi">فلسفی</option>
+                                    <option class="subOption" value="tarikhi">تاریخی</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="subButton" type="submit" id="addBook">ثبت</button>
+                </div>
+                <div class="searchBook">
+                    <h1 class="searchTitle">جستجوی کتاب</h1>
+                    <!--                <div class="by-Number">-->
+                    <!--                    <label for="byNumber">بر اساس شماره</label>-->
+                    <!--                    <input type="text" name="byNumber" id="byNumber">-->
+                    <!--                </div>-->
+                    <div class="by-Name">
+                        <label for="byName">عنوان کتاب را وارد نمایید:</label>
+                        <input type="text" name="byName" id="byName">
+                    </div>
+                    <button class="subButton" type="submit" id="searchBook">جستجو</button>
+                    <div class="result">
+                        <h4 class="resultTitle">شماره ردیف کتاب جستجو شده: </h4>
+                        <h4 class="resultNumber"></h4>
+                    </div>
+                </div>
+            </div>
+            <section class="bookList">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th>شماره</th>
+                        <th>عنوان کتاب</th>
+                        <th>نویسنده</th>
+                        <th>سال انتشار</th>
+                        <th>دسته موضوعی</th>
+                        <th>عملیات</th>
+                    </tr>
+                    </thead>
+                    <tbody id="book-list">
+
+                    </tbody>
+                </table>
+            </section>
+        </section>
+    </section>
+
+    <!-- Date Box-->
+    <div class="dateBox">
+        <div class="box-wrapper">
+            <div class="getBookDate">
+                <label for="loanDate">تاریخ امانت</label>
+                <p id="loanDate">1401/2/12</p>
+            </div>
+            <div class="backBookDate">
+                <label for="loanDate">تاریخ بازگشت</label>
+                <p id="backDate">1401/2/14</p>
+            </div>
+        </div>
+        <button class="closeDateBox">بستن</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <h4 class="modalTitle">فیلد عنوان کتاب را پر کنید!</h4>
+    </div>
+
+    <!-- Confirm -->
+    <div class="confirm">
+        <h4 class="modalTitle">از حذف خود اطمینان دارید؟</h4>
+        <div class="confirm-wrapper">
+            <div class="operationBtn">
+                <button class="confirmBtn">تایید</button>
+                <button class="cancellBtn">لغو</button>
+            </div>
+        </div>
+    </div>
+    <script src="./Asset/js/script.js"></script>
+</body>
+</html>
